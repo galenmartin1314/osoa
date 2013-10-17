@@ -1,0 +1,176 @@
+*{
+	margin: 0px;
+	padding: 0px;
+	cursor: default;
+	-moz-user-select:none;
+	-webkit-user-select: none;
+	hutia:expression(this.onselectstart=function(){return(false)});
+}
+.desktop{
+    background: url('../images/blue_glow.jpg');
+}
+.taskbar{
+	height:40px;
+	background: #99bbe8;
+	background:#99bbe8;
+}
+.taskbar_container{
+	height: 40px;
+	font-weight: bold;
+	color: #fff;
+	background:#99bbe8;
+}
+.taskbar_container .timer{
+	height:40px;
+	background:#99bbe8;
+	width:106px;
+	text-align: center;
+	padding-top: 7px;
+}
+.taskbar_container .bar_container{
+	height:40px;
+	background:#99bbe8;
+}
+
+.taskbar_container .bar_container .bar_column_out{
+	float:left;
+	width:34px;
+	height:34px;
+	border: solid 1px #999;
+	margin:2px 0px 2px 10px;
+	padding-left: 2px;
+	list-style: none;
+	line-height: 36px;
+}
+.taskbar_container .bar_container .bar_column_out img{
+	margin-top: 2px;
+	float:left;
+}
+.taskbar_container .bar_container .bar_column_out em{
+	font-style: normal;
+	float:left;
+	position:relative;
+}
+
+.taskbar_container .bar_container .bar_column_in{
+	float:left;
+	width:34px;
+	height:34px;
+	border: solid 1px #fff;
+	margin:2px 0px 2px 10px;
+	padding-left: 2px;
+	list-style: none;
+	line-height: 36px;
+}
+.taskbar_container .bar_container .bar_column_in img{
+	margin-top: 2px;
+	float:left;
+}
+.taskbar_container .bar_container .bar_column_in em{
+	font-style: normal;
+	float:left;
+	position:relative;
+}
+
+.taskbar_container .bar_container .bar_column_select{
+	float:left;
+	width:34px;
+	height:34px;
+	border: solid 1px #fff;
+	margin:2px 0px 2px 10px;
+	padding-left: 2px;
+	list-style: none;
+	line-height: 36px;
+}
+.taskbar_container .bar_container .bar_column_select img{
+	margin-top: 2px;
+	float:left;
+}
+.taskbar_container .bar_container .bar_column_select em{
+	font-style: normal;
+	float:left;
+	position:relative;
+}
+
+.start_menu{
+	position: relative;
+	z-index: 10000;
+	width: 220px;
+	left: -250px;
+	top: 0px;
+}
+.start_menu ul li{list-style: none; display:block; margin: 10px; height: 20px; line-height: 20px; font-size: 12px;}
+.start_menu ul li:hover{list-style: none; display:block; margin: 10px; height: 20px; line-height: 20px; font-size: 12px; border: 1px dashed #7d8589;color:#0000ff; font-weight:bold; cursor: pointer;}
+.start_menu ul li span{cursor: pointer;}
+.start_menu ul li img{ float:left; margin: 2px;  cursor: pointer;}
+
+
+
+.deskicon{
+	width:100px;
+	height:100px;
+	text-align: center;
+	padding:0px auto;
+	color:#fff;
+	position: absolute;
+	display:table;
+	cursor: pointer;
+}
+.deskicon div{
+	vertical-align:middle;
+	display:table-cell;
+	cursor: pointer;
+}
+.deskicon div p{
+	cursor: pointer;
+}
+.deskicon div img{
+	margin: 0px auto;
+	vertical-align:middle;
+	cursor: pointer;
+}
+.deskicon div em{
+	font-style: normal;
+	font-weight: bold;
+	filter:glow(color=#555,strength=5);
+	text-shadow: 2px 2px 1px #555;
+	cursor: pointer;
+}
+
+#userDiv{width:170px; height: 53px; background: url("../images/icon/user.png"); float: right; margin: 10px;}
+#userDiv div{margin-top: 5px;margin-left: 10px; color: #54bc18; display: none;}
+#userDiv:hover{width:170px; height: 53px; background: url("../images/icon/user-show.png"); float: right; margin: 10px;}
+#userDiv:hover div{margin-top: 5px;margin-left: 10px; color: #54bc18; display: block;}
+#userDiv:hover div a{color: #54bc18; cursor: pointer; text-decoration: none;}
+#userDiv:hover div a:hover{color: #54bc18; cursor: pointer; text-decoration: underline;}
+
+.input{border: 1px solid #99bbe8;height:20px;}
+.textarea{border: 1px solid #99bbe8;}
+
+.window16x16{background: url("../images/icon/window16x16.png") no-repeat;}
+.baidu16x16{background: url("../images/icon/baidu16x16.png") no-repeat;}
+.sina16x16{background: url("../images/icon/sina16x16.png") no-repeat;}
+.hudongbk16x16{background: url("../images/icon/hudongbk16x16.png") no-repeat;}
+.letv16x16{background: url("../images/icon/letv16x16.png") no-repeat;}
+.qianqian16x16{background: url("../images/icon/qianqian16x16.png") no-repeat;}
+.doubandt16x16{background: url("../images/icon/doubandt16x16.png") no-repeat;}
+.taobao16x16{background: url("../images/icon/taobao16x16.png") no-repeat;}
+.zhongguancun16x16{background: url("../images/icon/zhongguancun16x16.png") no-repeat;}
+
+
+.settings{background: url("../images/menu/settings.png") no-repeat;}
+.home{background: url("../images/menu/home16x16.png") no-repeat;}
+.nation{background: url("../images/menu/nation16x16.png") no-repeat;}
+.cards{background: url("../images/menu/cards16x16.png") no-repeat;}
+.student{background: url("../images/menu/student16x16.png") no-repeat;}
+.book{background: url("../images/menu/book16x16.png") no-repeat;}
+.star{background: url("../images/menu/star16x16.png") no-repeat;}
+.money{background: url("../images/menu/money16x16.png") no-repeat;}
+.zhengzhi{background: url("../images/menu/zhengzhi16x16.png") no-repeat;}
+.adminper{background: url("../images/menu/adminper.png") no-repeat;}
+.infom{background: url("../images/menu/infom16x16.png") no-repeat;}
+.passwords{background: url("../images/menu/passwords16x16.png") no-repeat;}
+.baseadmin{background: url("../images/menu/baseadmin.png") no-repeat;}
+.employee{background: url("../images/menu/employee16x16.png") no-repeat;}
+.department{background: url("../images/menu/department16x16.png") no-repeat;}
+.users{background: url("../images/menu/users16x16.png") no-repeat;}

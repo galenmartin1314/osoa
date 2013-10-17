@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns="http://java.sun.com/xml/ns/javaee" xmlns:web="http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd"
+	xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd"
+	id="WebApp_ID" version="3.0">
+	<display-name>osoa</display-name>
+	<!-- 设置Spring容器加载配置文件路径 -->
+	<context-param>
+		<param-name>contextConfigLocation</param-name>
+		<param-value>classpath*:mybatis-context.xml</param-value>
+	</context-param>
+	<!-- 加载Spring容器配置 -->
+	<listener>
+		<listener-class>org.springframework.web.context.ContextLoaderListener</listener-class>
+	</listener>
+	<filter>
+		<filter-name>requestContextFilter</filter-name>
+		<filter-class>org.springframework.web.filter.RequestContextFilter</filter-class>
+	</filter>
+	<filter-mapping>
+		<filter-name>requestContextFilter</filter-name>
+		<url-pattern>/*</url-pattern>
+	</filter-mapping>
+	<!-- 编码设置 -->
+	<filter>
+		<filter-name>CharacterEncodingFilter</filter-name>
+		<filter-class>org.springframework.web.filter.CharacterEncodingFilter</filter-class>
+		<init-param>
+			<param-name>encoding</param-name>
+			<param-value>UTF-8</param-value>
+		</init-param>
+		<init-param>
+			<param-name>forceEncoding</param-name>
+			<param-value>true</param-value>
+		</init-param>
+	</filter>
+	<filter-mapping>
+		<filter-name>CharacterEncodingFilter</filter-name>
+		<url-pattern>/*</url-pattern>
+	</filter-mapping>
+	<!-- Spring MVC配置 -->
+	<servlet>
+		<servlet-name>osoamvc</servlet-name>
+		<servlet-class>org.springframework.web.servlet.DispatcherServlet</servlet-class>
+		<load-on-startup>1</load-on-startup>
+		<init-param>
+			<param-name>contextConfigLocation</param-name>
+			-->
+			<!-- 默认情况是 /WEB-INF/servlet-name-servlet.xml -->
+			<!-- <param-value>/WEB-INF/dispatcher.xml</param-value> -->
+			<param-value>classpath*:springmvc-servlet.xml</param-value>
+		</init-param>
+	</servlet>
+	<!-- url配置为/,不带文件后缀会造成其他文件(js,css)不能访问,如配为*.do,则不影响静态文件访问 -->
+	<servlet-mapping>
+		<servlet-name>osoamvc</servlet-name>
+		<url-pattern>*.shtml</url-pattern>
+	</servlet-mapping>
+	<!-- 应用程序配置 -->
+	<servlet>
+	    <servlet-name>com.gm.osoa.common.InitializeServlet</servlet-name>
+	    <servlet-class>com.gm.osoa.common.InitializeServlet</servlet-class>
+	    <load-on-startup>2</load-on-startup>
+	</servlet>
+
+	<!-- 验证码 -->
+	<servlet>
+		<servlet-name>com.gm.osoa.common.VerifyCode</servlet-name>
+		<servlet-class>com.gm.osoa.common.VerifyCode</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>com.gm.osoa.common.VerifyCode</servlet-name>
+		<url-pattern>vc.jsp</url-pattern>
+	</servlet-mapping>
+
+	<!-- 欢迎页面 -->
+	<welcome-file-list>
+		<welcome-file>index.html</welcome-file>
+		<welcome-file>index.htm</welcome-file>
+		<welcome-file>index.jsp</welcome-file>
+		<welcome-file>default.html</welcome-file>
+		<welcome-file>default.htm</welcome-file>
+		<welcome-file>default.jsp</welcome-file>
+	</welcome-file-list>
+	<!-- <error-page> <error-code>400</error-code> <location>/400.html</location> 
+		</error-page> <error-page> <error-code>403</error-code> <location>/400.html</location> 
+		</error-page> <error-page> <error-code>404</error-code> <location>/400.html</location> 
+		</error-page> <error-page> <error-code>405</error-code> <location>/400.html</location> 
+		</error-page> <error-page> <error-code>500</error-code> <location>/500.html</location> 
+		</error-page> <error-page> <error-code>501</error-code> <location>/500.html</location> 
+		</error-page> <error-page> <error-code>502</error-code> <location>/500.html</location> 
+		</error-page> <error-page> <error-code>503</error-code> <location>/500.html</location> 
+		</error-page> -->
+</web-app>

@@ -1,0 +1,80 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<link rel="Shortcut Icon" href="favicon.ico">
+	<title>网络桌面办公自动化管理系统 - 系统登录</title>
+	<link rel="stylesheet" type="text/css" href="themes/default/easyui.css">
+	<link rel="stylesheet" type="text/css" href="css/login.css">
+	<script type="text/javascript" src="js/jquery-1.8.0.min.js"></script>
+	<script type="text/javascript" src="js/jquery.easyui.min.js"></script>
+	<script type="text/javascript" src="js/easyui-lang-zh_CN.js"></script>
+	<script type="text/javascript" src="js/hashmap.js"></script>
+	<script type="text/javascript" src="js/verifyform.js"></script>
+	<!--[if IE]>
+	<style type="text/css">
+	#username{
+		*margin-top: 61px;
+		width:188px;
+	}
+	#password{
+		*margin-top: 14px;
+		width:188px;
+	}
+	#vocde{
+		*margin-top: 14px;
+		width:88px;
+	}
+	#devsub{
+		border:0px; 
+		margin-left: 239px;
+		margin-top: 32px; 
+		width:70px; 
+		height:28px;
+		cursor: pointer;
+		opacity: 0;
+		filter:alpha(opacity=0);
+	}
+	#devreset{
+		border:0px; 
+		width:70px;
+		height:28px;
+		cursor: pointer;
+		opacity: 0;
+		filter:alpha(opacity=0);
+	}
+	</style>
+	<![endif]-->
+	<script> 
+	if (window.matchMedia("screen and (-ms-high-contrast: active), (-ms-high-contrast: none)").matches) { 
+		document.documentElement.className += "ie10"; 
+	} 
+	</script>
+</head>
+<body class="easyui-layout" onload="document.getElementById('username').focus();">
+<form id="form0" name="form0" method="post" action="login.shtml">
+	<div data-options="region:'north',border:false" class="north">
+		<div class="easyui-layout head1">
+			<div data-options="region:'west',border:false" class="logo"><img src="images/login/logo.png"></div>
+			<div data-options="region:'center',border:false" class="title"><img src="images/login/title.png"></div>
+			<div data-options="region:'east',border:false" class="nonediv">&nbsp;</div>
+		</div>
+		<div class="head2"></div>
+	</div>
+	<div data-options="region:'center',border:false" class="main">
+		<div class="error" style="border :1px solid #fff;">
+			HTTP5xx服务器错误，请【<a href="index.html">登录</a>】后重试！
+		</div>
+	</div>
+	<div data-options="region:'south',border:false" class="footer">
+		<div>&copy;2013,版权所有</div>
+	</div>
+	<span id="message" style="display:none;">${message}</span>
+</form>
+<script type="text/javascript">
+$(function(){
+	if($('#message').html().indexOf("message")==-1 && $('#message').html()!=""){$.messager.alert('系统信息',$('#message').html(),'info');}
+});
+</script>
+</body>
+</html>

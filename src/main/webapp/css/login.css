@@ -1,0 +1,133 @@
+.north{
+	width: 100%;
+	overflow:hidden;
+	margin: 0px auto;
+}
+.head1{
+	height: 150px;
+	margin: 0px auto;
+}
+.logo{
+	float: left;
+	width: 150px;
+	height: 150px;
+	background: url('../images/login/bg_header.png');
+}
+.logo img{
+	margin-left:20px;
+	margin-top: 20px;
+}
+.title{
+	float: left;
+	height: 150px;
+	background: url('../images/login/bg_header.png');
+	text-align: center;
+}
+.title img{
+	margin: 0px auto;
+	margin-top: 45px;
+}
+.nonediv{
+	float:right;
+	width:150px;
+	height: 150px;
+	background: url('../images/login/bg_header.png');
+}
+.head2{
+	height: 10px;
+	background: url('../images/login/bg_header1.png');
+}
+.main{
+	background: url('../images/login/bg_main.png');
+	text-align: center;
+}
+.main div{
+	background: url('../images/login/login.png');
+	text-align: left;
+	width:406px;
+	height:233px;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 30px;
+}
+.main .error{
+	background: url('../images/login/error.png');
+	text-align: left;
+	width:406px;
+	height:233px;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 30px;
+	text-align: center;
+	vertical-align: middle;
+	line-height: 233px;
+	font-size: 14px;
+	color: #f00;
+}
+.footer{
+	height:40px;
+	text-align: center;
+	background: url('../images/login/bg_footer.png');
+}
+.footer div{
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 10px;
+	font-weight: bold;
+	font-size: 14px;
+	color: #fff;
+}
+#username{
+	border:0px; 
+	margin-left: 204px;
+	margin-top: 62px; 
+	height: 20px; 
+	width:190px;
+}
+.ie10 #username{
+	width:188px;
+}
+#password{
+	border:0px; 
+	margin-left: 204px;
+	margin-top: 16px; 
+	height: 20px; 
+	width:190px;
+}
+.ie10 #password{
+	width:188px;
+}
+#vcode{
+	margin-left: 204px;
+	margin-top: 16px; 
+	border:0px; 
+	height: 20px; 
+	width:90px;
+}
+#codeimg{
+	position: absolute;
+	margin-left: 10px;
+	margin-top: 17px;
+	cursor: pointer;
+}
+.ie10 #vcode{
+	width:88px;
+}
+#devsub{
+	border:0px; 
+	margin-left: 239px;
+	margin-top: 32px; 
+	width:70px; 
+	height:28px;
+	cursor: pointer;
+	opacity: 0;
+	filter:alpha(opacity=0);
+}
+#devreset{
+	border:0px; 
+	width:70px;
+	height:28px;
+	cursor: pointer;
+	opacity: 0;
+	filter:alpha(opacity=0);
+}

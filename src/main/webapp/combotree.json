@@ -1,0 +1,21 @@
+[{
+	"id":"aaaaa",
+	"text":"部门列表",
+	"children":[{
+		"id":"bbbbb",
+		"text":"系统部门",
+		"state":"closed",
+		"children":[{
+			"id":"ccccc",
+			"text":"测试部门"
+		}]
+	},{
+		"id":"ddddd",
+		"text":"测试部门",
+		"state":"closed",
+		"children":[{
+			"id":"eeeee",
+			"text":"测试"
+		}]
+	}]
+}]

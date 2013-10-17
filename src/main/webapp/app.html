@@ -1,0 +1,41 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<link rel="Shortcut Icon" href="favicon.ico">
+	<title>网络桌面办公自动化管理系统</title>
+	<link rel="stylesheet" type="text/css" href="themes/default/easyui.css"/>
+	<link rel="stylesheet" type="text/css" href="themes/icon.css">
+	<link rel="stylesheet" type="text/css" href="css/app.css"/>
+	<link rel="stylesheet" type="text/css" href="css/jquery.contextMenu.css"/>
+	<script type="text/javascript" src="js/jquery-1.8.0.min.js"></script>
+	<script type="text/javascript" src="js/jquery.easyui.min.js"></script>
+    <script type="text/javascript" src="js/jquery.ui.position.js"></script>
+	<script type="text/javascript" src="js/easyui-lang-zh_CN.js"></script>
+	<script type="text/javascript" src="settings/privi/menu.shtml"></script>
+	<script type="text/javascript" src="js/app.js"></script>
+	<script type="text/javascript" src="js/map.js"></script>
+	<script type="text/javascript" src="js/jquery.contextMenu.js"></script>
+	
+</head>
+<body class="easyui-layout">
+	<div data-options="region:'center',border:false" class="desktop">
+		<div id="userDiv">
+			<div>欢迎:<label style="font-weight: bold;">${Session.emp.empName}</label><br/><br/>
+			&nbsp;【<a href="#">退出登录</a>】
+			</div>
+		</div>
+	</div>
+	<div data-options="region:'south',border:false" class="taskbar">
+		<div class="easyui-layout taskbar_container">
+			<div data-options="region:'center',border:false" class="bar_container">
+			</div>
+			<div data-options="region:'east',border:false" class="timer"></div>
+		</div>
+	</div>
+	
+	<div id="startmenu" class="start_menu">
+		<div id="navigator" class="easyui-accordion" border="true"></div>
+	</div>
+</body>
+</html>
